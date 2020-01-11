@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class changeMaterial : MonoBehaviour {
     public Material[] material;
     public float speed;
+    public float value = 0f;
     private float size;
-    private float value = 0f;
     private int dice;
     private int randomStart = 0;
     private int randomEnd = 100;
@@ -38,7 +39,7 @@ public class changeMaterial : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if(value >= 1) {
-            Application.Quit();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         if (Input.GetButton("Scale")) {
