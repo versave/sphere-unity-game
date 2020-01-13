@@ -573,7 +573,7 @@ GameObject:
   - component: {fileID: 1342682073}
   - component: {fileID: 1342682074}
   m_Layer: 0
-  m_Name: Fail menu
+  m_Name: Succes menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4199534f52c90841a08324660c44795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToOpenIndex: -1
+  sceneToOpenIndex: -2
 --- !u!1 &1504925095
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 1655966460}
   - component: {fileID: 1655966459}
   m_Layer: 5
-  m_Name: Fail message
+  m_Name: Success message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6037736, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.57084626, b: 0.6039216, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -818,7 +818,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You Failed
+  m_Text: Success!
 --- !u!222 &1655966460
 CanvasRenderer:
   m_ObjectHideFlags: 0

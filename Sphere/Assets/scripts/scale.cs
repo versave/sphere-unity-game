@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scale : MonoBehaviour {
     private float size;
     private float multiplier;
     public float defaultSize;
     public float defaultMultiplier;
+    public float maxSize;
     private bool cooldown = false;
 
     void resetCooldown() {
@@ -21,6 +23,12 @@ public class scale : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        // Show success screen
+        if(size >= maxSize && this.gameObject.tag == "shell") {
+            FindObjectOfType<GameManager>().loadScene(+2);
+        }
+
         if(Input.GetButton("Scale") && cooldown == false) {
             size += multiplier;
 

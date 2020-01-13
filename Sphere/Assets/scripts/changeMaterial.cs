@@ -7,10 +7,11 @@ public class changeMaterial : MonoBehaviour {
     public Material[] material;
     public float speed;
     public float value = 0f;
+    public int diceSize;
+    public int minDiceSize;
     private float size;
     private int dice;
     private int randomStart = 0;
-    private int randomEnd = 100;
 
     Renderer rend;
 
@@ -38,25 +39,27 @@ public class changeMaterial : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        // End game
         if(value >= 1) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            FindObjectOfType<GameManager>().loadScene(+1);
         }
 
         if (Input.GetButton("Scale")) {
-            dice = randomNumber(randomStart, randomEnd);
+            dice = randomNumber(randomStart, diceSize);
 
             if (dice == 6) {
                 rend.sharedMaterial = material[1];
                 rend.material.Lerp(material[0], material[1], incTransition(ref value, speed));
 
                 randomStart = 6;
-                randomEnd = 6;
+                diceSize = 6;
             }
         } else if (transform.localScale.x > size) {
             rend.material.Lerp(material[0], material[1], decTransition(ref value, speed));
 
             randomStart = 0;
-            randomEnd = randomEnd >= 20 ? randomEnd -= 1 : 20;
+            diceSize = diceSize >= minDiceSize ? diceSize -= 1 : minDiceSize;
         }
     }
 }
