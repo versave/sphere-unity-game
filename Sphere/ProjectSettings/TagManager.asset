@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - shell
+  - child
   layers:
   - Default
   - TransparentFX

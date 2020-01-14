@@ -14,6 +14,9 @@ public class changeMaterial : MonoBehaviour {
     private int randomStart = 0;
 
     Renderer rend;
+    Renderer rendBall;
+
+    GameObject ball;
 
     int randomNumber(int min, int max) {
         System.Random random = new System.Random();
@@ -32,8 +35,11 @@ public class changeMaterial : MonoBehaviour {
         rend = GetComponent<Renderer>();
         rend.enabled = true;
 
-        scale scale = gameObject.GetComponent <scale>();
+        ball = GameObject.FindGameObjectWithTag("child");
+        rendBall = ball.GetComponent<Renderer>();
+        rendBall.enabled = true;
 
+        scale scale = gameObject.GetComponent <scale>();
         size = scale.defaultSize;
     }
 
@@ -52,11 +58,15 @@ public class changeMaterial : MonoBehaviour {
                 rend.sharedMaterial = material[1];
                 rend.material.Lerp(material[0], material[1], incTransition(ref value, speed));
 
+                rendBall.sharedMaterial = material[1];
+                rendBall.material.Lerp(material[0], material[1], incTransition(ref value, speed));
+
                 randomStart = 6;
                 diceSize = 6;
             }
         } else if (transform.localScale.x > size) {
             rend.material.Lerp(material[0], material[1], decTransition(ref value, speed));
+            rendBall.material.Lerp(material[0], material[1], decTransition(ref value, speed));
 
             randomStart = 0;
             diceSize = diceSize >= minDiceSize ? diceSize -= 1 : minDiceSize;

@@ -7,6 +7,6 @@ public class GameManager : MonoBehaviour
 {
 
     public void loadScene(int index) {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + index);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + index);
     }
 }

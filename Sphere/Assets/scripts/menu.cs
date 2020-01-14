@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class menu : MonoBehaviour
 {
     public int sceneToOpenIndex;
+    private bool allowRestart = false;
 
     public void restartGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + sceneToOpenIndex);
@@ -13,5 +14,19 @@ public class menu : MonoBehaviour
 
     public void quitGame() {
         Application.Quit();
+    }
+
+    void Update() {
+        if (Input.GetKeyUp("space")) {
+            allowRestart = true;
+        }
+
+        if (Input.GetKeyDown("space") && allowRestart) {
+            restartGame();
+        }
+
+        if (Input.GetKeyDown("escape")) {
+            quitGame();
+        }
     }
 }
