@@ -17,6 +17,8 @@ public class scale : MonoBehaviour {
     
     // Start is called before the first frame update
     void Start() {
+        defaultSize = transform.localScale.x;
+
         size = defaultSize;
         multiplier = defaultMultiplier;
     }
