@@ -13,12 +13,8 @@ public class ShowButton : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("space")) {
-            Debug.Log(1);
-
             button.SetActive(false);
         } else if(Input.GetKeyUp("space")) {
-            Debug.Log(2);
-
             button.SetActive(true);
         }    
     }
