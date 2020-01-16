@@ -6,6 +6,7 @@ TagManager:
   tags:
   - shell
   - child
+  - button
   layers:
   - Default
   - TransparentFX
