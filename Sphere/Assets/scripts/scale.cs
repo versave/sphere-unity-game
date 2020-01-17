@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class scale : MonoBehaviour {
-    private float size;
     private float multiplier;
+    public float size;
     public float defaultSize;
     public float defaultMultiplier;
     public float maxSize;
