@@ -212,7 +212,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.2
+  m_Intensity: 1.38
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -221,8 +221,8 @@ Light:
     m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0
-    m_NormalBias: 0.41
+    m_Bias: 0.17
+    m_NormalBias: 0
     m_NearPlane: 0.1
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
@@ -234,7 +234,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2.71
+  m_BounceIntensity: 1.98
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -667,7 +667,7 @@ Camera:
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_GateFitMode: 2
-  m_FocalLength: 26.331598
+  m_FocalLength: 24.45
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -676,7 +676,7 @@ Camera:
     height: 1
   near clip plane: 0.099999994
   far clip plane: 1000
-  field of view: 49
+  field of view: 52.283382
   orthographic: 0
   orthographic size: 0.0023999999
   m_Depth: 0
@@ -687,7 +687,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 1
@@ -784,9 +784,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 16.54
+  m_Intensity: 20
   m_Range: 10.5
-  m_SpotAngle: 19.6
+  m_SpotAngle: 20
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -809,7 +809,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_ShadowRadius: 0
+  m_ShadowRadius: 3.33
   m_ShadowAngle: 0
 --- !u!1 &800856466
 GameObject:
@@ -1460,8 +1460,8 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267826311}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 0a120b21c8a9d234c867f8d702b28728, type: 3}
-  m_TargetCameraAlpha: 0.8
+  m_VideoClip: {fileID: 32900000, guid: 7e39e35cd1c1c6f4bac5c1f093aa4043, type: 3}
+  m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 799218610}
   m_TargetTexture: {fileID: 0}
