@@ -959,9 +959,9 @@ MonoBehaviour:
   material:
   - {fileID: 2100000, guid: b5912d15fbb9f0d4cac393755056fa92, type: 2}
   - {fileID: 2100000, guid: 1520fc0d620cf2741ac5f900e878c028, type: 2}
-  speed: 0.005
+  speed: 0.008
   value: 0
-  diceSize: 200
+  diceSize: 150
   minDiceSize: 20
 --- !u!114 &800856476
 MonoBehaviour:
