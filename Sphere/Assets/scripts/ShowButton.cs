@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class ShowButton : MonoBehaviour
 {
-    GameObject button;
+    public Animator animator;
 
-    private void Start() {
-        button = GameObject.FindGameObjectWithTag("button");
+    // Start is called before the first frame update
+    void Start()
+    {
+        animator = GetComponent<Animator>();
     }
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown("space")) {
-            button.SetActive(false);
-        } else if(Input.GetKeyUp("space")) {
-            button.SetActive(true);
-        }    
+            animator.Play("buttonFade"); 
+        }
     }
 }

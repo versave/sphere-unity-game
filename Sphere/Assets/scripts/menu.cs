@@ -16,6 +16,11 @@ public class menu : MonoBehaviour
         Application.Quit();
     }
 
+    private void Start() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     void Update() {
         if (Input.GetKeyUp("space")) {
             allowRestart = true;
