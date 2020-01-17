@@ -8,6 +8,7 @@ TagManager:
   - child
   - button
   - Music
+  - highScore
   layers:
   - Default
   - TransparentFX
